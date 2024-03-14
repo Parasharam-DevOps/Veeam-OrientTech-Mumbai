@@ -1,5 +1,9 @@
 # Storage Tier Comparison
 
+
+![image](https://github.com/Parasharam-DevOps/Veeam-OrientTech-Mumbai/assets/132131379/d5bf9e6a-e8b3-4fdb-859e-4529072636b2)
+
+
 This document provides a comparison of different storage tiers commonly used in data storage systems.
 
 ## Storage Tiers Overview
