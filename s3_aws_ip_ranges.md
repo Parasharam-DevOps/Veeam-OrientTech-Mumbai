@@ -7,9 +7,11 @@ This script is designed to extract the IP ranges associated with AWS S3 (Simple 
 ## How to Use
 
 ### Prerequisites
-- Python3
-- Jq   [Link](https://www.scaler.com/topics/linux-jq/)
-       [Link](https://github.com/jqlang/jq/releases/tag/jq-1.6)
+- **Python3**
+- **Jq**
+    - [Documentation](https://www.scaler.com/topics/linux-jq/)
+    - [GitHub Releases](https://github.com/jqlang/jq/releases/tag/jq-1.6)
+
 
 ### Steps
 1. Download the latest `ip-ranges.json` file from AWS.
