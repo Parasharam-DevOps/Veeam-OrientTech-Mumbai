@@ -1,26 +1,24 @@
-# To count aws s3 ips follow below scripts it will be give you all aws s3 ips
+# AWS S3 IP Range Extraction
 
-The issue you're facing is that the IP ranges for AWS services are not static and can change over time. The ip-ranges.json file you're using is a static snapshot of the IP ranges, which means it won't be updated automatically.
+## Introduction
 
-To get the latest IP ranges, you need to download the ip-ranges.json file from the AWS IP ranges URL:
+This script is designed to extract the IP ranges associated with AWS S3 (Simple Storage Service). This issue arises when connecting Veeam to an S3 object storage repository job in AWS, and the network team has blocked the traffic. They require specific ports, prompting the need for IP ranges. Security concerns dictate that not all traffic can be allowed, hence the need for specific IP ranges.
 
-import requests
+## How to Use
 
-url = "https://ip-ranges.amazonaws.com/ip-ranges.json"
-response = requests.get(url)
+### Prerequisites
+- Python3
+- Jq   [Link](https://www.scaler.com/topics/linux-jq/)
+       [Link](https://github.com/jqlang/jq/releases/tag/jq-1.6)
 
-if response.status_code == 200:
-    with open('ip-ranges.json', 'w') as f:
-        f.write(response.text)
-else:
-    print("Failed to download the IP ranges file")
+### Steps
+1. Download the latest `ip-ranges.json` file from AWS.
+2. Run the `extract_ips.py` script to extract the IPv4 and IPv6 prefixes.
+3. Use the extracted IP ranges for configuring security rules and policies.
 
+### Script
 
-After downloading the latest ip-ranges.json file, you can run your extract_ips.py script again to get the latest IPv4 and IPv6 prefixes.
-
-Here's the complete code:
-
-
+```python
 import json
 import requests
 
@@ -50,8 +48,10 @@ for prefix in ipv6_prefixes:
     ipv6_prefix = prefix['ipv6_prefix']
     print("IPv6 Prefix:", ipv6_prefix)
 
+# Note
+AWS IP ranges are dynamic and subject to change. Regularly update the ip-ranges.json file.
+IP ranges for S3 cover the entire service, not specific to individual buckets. Use IAM policies or bucket policies for bucket-specific restrictions.
 
+# Resource
 
-This will print out the latest IPv4 and IPv6 prefixes for all AWS services, including S3.
-
-Note that the IP ranges for S3 are not specific to a particular bucket, but rather to the S3 service as a whole. If you want to restrict access to a specific S3 bucket, you should use an IAM policy or a bucket policy instead of IP-based restrictions.
+- **Blog I Refer**: [Disaster Recovery Options](https://docs.aws.amazon.com/vpc/latest/userguide/aws-ip-ranges.html)
