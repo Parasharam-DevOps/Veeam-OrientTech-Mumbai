@@ -18,7 +18,27 @@ This script is designed to extract the IP ranges associated with AWS S3 (Simple 
 
 ### Script
 
-```python
+**ip-ranges.json**
+
+```
+import requests
+
+url = "https://ip-ranges.amazonaws.com/ip-ranges.json"
+response = requests.get(url)
+
+if response.status_code == 200:
+    with open('ip-ranges.json', 'w') as f:
+        f.write(response.text)
+else:
+    print("Failed to download the IP ranges file")
+
+
+```
+
+**extract_ips.py**
+
+```
+
 import json
 import requests
 
@@ -48,10 +68,11 @@ for prefix in ipv6_prefixes:
     ipv6_prefix = prefix['ipv6_prefix']
     print("IPv6 Prefix:", ipv6_prefix)
 
+```
 # Note
 AWS IP ranges are dynamic and subject to change. Regularly update the ip-ranges.json file.
 IP ranges for S3 cover the entire service, not specific to individual buckets. Use IAM policies or bucket policies for bucket-specific restrictions.
 
 # Resource
 
-- **Blog I Refer**: [Disaster Recovery Options](https://docs.aws.amazon.com/vpc/latest/userguide/aws-ip-ranges.html)
+- **Blog I Refer**: [Link](https://docs.aws.amazon.com/vpc/latest/userguide/aws-ip-ranges.html)
