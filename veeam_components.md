@@ -40,6 +40,10 @@ A backup repository is a storage location where Veeam keeps backup files, and it
 * The mount server must be in the same location as the backup repository where backup files are stored to enable the best performance.
 
 
+![image](https://github.com/Parasharam-DevOps/Veeam-OrientTech-Mumbai/assets/132131379/fe35e05c-b009-4096-ad7a-04f7bf33531f)
+
+
+
 
 
 # Resource
