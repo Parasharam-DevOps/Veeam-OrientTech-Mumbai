@@ -27,6 +27,19 @@ A backup repository is a storage location where Veeam keeps backup files, and it
 * IC4V Default Config Backup Repository - Used as an extant of the IC4V Scale-Out Repository performance tier.
 
 
+**Scale-out backup repository**
+
+* A scale-out backup repository consists of one or more backup repositories that are called the `performance tier`.
+* It can be expanded with object storage repositories for long-term and archive storage that is known as capacity tier and `archive tier`.
+* A scale-out backup repository enables horizontal scaling support for multitier storage of data.
+
+**Mount Server**
+
+* A mount server is a component on a Windows based managed server, which is required for restores of guest OS files, application items, or secure restore.
+* The Veeam backup file is mounted by the mount server so that the files can be copied to the restore destination.
+* The mount server must be in the same location as the backup repository where backup files are stored to enable the best performance.
+
+
 
 
 # Resource
