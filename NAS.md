@@ -11,7 +11,7 @@ A NAS system is a storage device connected to a network that allows storage and 
 * Good at centralizing data storage in a safe, reliable way
 * With a NAS system, data is continually accessible, making it easy for employees to collaborate, respond to customers in a timely fashion, and promptly follow up on sales or other issues because information is in one place. Because NAS is like a private cloud, data may be accessed remotely using a network connection, meaning employees can work anywhere, anytime.
 
-Diagram
+**Diagram**
 
 
 ![image](https://github.com/Parasharam-DevOps/Veeam-OrientTech-Mumbai/assets/132131379/a4bb41c1-94e7-4154-8ac3-fe0291c0ac6c)
