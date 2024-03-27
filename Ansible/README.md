@@ -10,7 +10,8 @@ What is Ansible ?
 
 Ansible is an open-source automation tool used for configuration management, application deployment, and task automation. It allows you to define tasks in a simple, human-readable language (YAML) and execute them across multiple servers simultaneously, making system administration more efficient and scalable.
 
-![image](https://github.com/Parasharam-DevOps/Veeam-OrientTech-Mumbai/assets/132131379/804715ed-5b10-48e5-9271-26b7892f12f5)
+![image](https://github.com/Parasharam-DevOps/Veeam-OrientTech-Mumbai/assets/132131379/32fdce55-b3ed-4d39-ba94-19f7c2dd979e)
+
 
 Without Ansible ? 
 
